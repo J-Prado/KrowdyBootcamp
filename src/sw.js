@@ -1,5 +1,5 @@
 chrome.action.onClicked.addListener((tab)=>{
-  console.log('click')
+  console.log('Hola')
   const options = {
     target: { tabId: tab.id },
     files: ["scripts/scrapper.js"]

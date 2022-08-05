@@ -2,7 +2,7 @@
   "name": "krowdybootcamp",
   "version": "1.0.0",
   "main": "index.js",
-  "author": "Shadowrunner11 <matematicadivina1@gmail.com>",
+  "author": "Juan Prado",
   "type": "module",
   "license": "MIT",
   "scripts": {
