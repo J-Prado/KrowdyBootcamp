@@ -4,4 +4,4 @@ class InfoItem {
   }
 }
 
-//this is a comment on this 
+//this is a comment on this
