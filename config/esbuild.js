@@ -1,13 +1,25 @@
-import esbuild from 'esbuild'
+
+import 'dotenv/config';
+import esbuild from 'esbuild';
+
+
+const entryPoints = [
+  'src/sw.js','src/scripts/scrapper.js'
+];
+
+// eslint-disable-next-line no-undef
+const { DEPLOYMENT } = process.env;
 
 esbuild.build({
-  entryPoints:['src/sw.js','src/scripts/scrapper.js'],
-  watch: true,
-  bundle: true,
-  outdir: 'dist',
+  entryPoints,
+  watch         : DEPLOYMENT==='DEV',
+  bundle        : true,
+  outdir        : 'dist',
   // target: 'chrome',
-  minify: true,
-  allowOverwrite: true
+  minify        : !(DEPLOYMENT==='DEV'),
+  allowOverwrite: true,
+  logLevel      : DEPLOYMENT==='DEV'? 'debug' :'silent',
+  // inject:['config/global.js']
 })
   .then(response => console.log(JSON.stringify(response)))
-  .catch(err => console.log(err))
+  .catch(err => console.log(err));
