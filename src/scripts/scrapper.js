@@ -28,7 +28,7 @@ async function getContacInfo(){
     
     return data
   } catch (error) {
-    console.log("🚀 ~ file: scrapper.js ~ line 30 ~ getContacInfo ~ error", error)  
+    
   }
 
 }

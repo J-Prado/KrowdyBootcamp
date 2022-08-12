@@ -7,7 +7,6 @@ const entryPoints = [
   'src/sw.js','src/scripts/scrapper.js'
 ];
 
-// eslint-disable-next-line no-undef
 const { DEPLOYMENT } = process.env;
 
 esbuild.build({
